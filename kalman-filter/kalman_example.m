@@ -73,7 +73,7 @@ for t = 1:array_length
     %predict next covariance
     P = A * P * A' + Ex;
     predic_var(:,:,t) = P;
-    % predicted Ninja measurement covariance
+    % predicted observer's measurement covariance
     % Kalman Gain
     K = P*C'*inv(C*P*C'+Ez);
     % Update the state estimate.
